@@ -2,8 +2,12 @@ name: "our-website"
 navbar:
   title: "All About Penguins!"
   left:
-    - text: "PEnguins"
+    - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Single Trait Distribution"
+      href: single-trait-distribution.html
+    - text: "Relationship between Multiple Traits"
+      href: relationship-between-multiple-traits.html
+    - text: "Sexual Dimorphism"
+      href: sexual-dimorphism.html
 output_dir: "."
