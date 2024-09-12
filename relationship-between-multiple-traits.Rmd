@@ -1,0 +1,19 @@
+---
+title: "Relationship Between Multiple Traits"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This section explores the relationship between different morphological traits in penguins. For example, the relationship between body mass and flipper length can be plotted:
+
+<br>
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE,fig.align='center'}
+ggplot(penguins,mapping=aes(x=body_mass_g,y=flipper_length_mm, 
+  color=species)) +
+  geom_point() +
+  geom_smooth(method="lm")
+```

@@ -1,0 +1,21 @@
+---
+title: "Single Trait Distribution"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This section explores single morphological traits in penguins. For example, bill length per species can be plotted:
+
+<br>
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE,fig.align='center'}
+ggplot(penguins) +
+  geom_density(mapping=aes(x=bill_length_mm,fill=species),  
+  alpha=0.5)
+ggplot(penguins) +
+  geom_histogram(mapping=aes(x=bill_length_mm,fill=species)) +
+  facet_wrap(~species,nrow=3)
+```

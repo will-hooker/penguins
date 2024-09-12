@@ -1,0 +1,24 @@
+---
+title: "Sexual Dimorphism"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This section explores the level of sexual dimorphism in different morphological traits. For example, what traits are sexually dimorphic in penguins?
+
+<br> 
+
+```{r,echo=FALSE,warning=FALSE,message=FALSE,fig.align='center'}
+ggplot(penguins,mapping=aes(x=bill_length_mm,y=bill_depth_mm, 
+  color=sex)) +
+  geom_point(size=1) +
+  facet_wrap(~species)
+ggplot(penguins,mapping=aes(x=flipper_length_mm,y=sex,color=sex)) +
+  geom_boxplot(outlier.alpha=0,alpha=0) +
+  geom_jitter(width=0, size=1) +
+  coord_flip() +
+  facet_wrap(~species)
+```
